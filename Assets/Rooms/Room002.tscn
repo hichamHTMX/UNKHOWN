@@ -50,17 +50,17 @@ position = Vector2(0, -5.5)
 shape = SubResource("RectangleShape2D_51ai6")
 disabled = true
 
-[node name="o_Amina" type="CharacterBody2D" parent="o_MainCharater" unique_id=907937097]
+[node name="o_2" type="CharacterBody2D" parent="o_MainCharater" unique_id=907937097]
 position = Vector2(-105, 36)
 
-[node name="Sprite" type="AnimatedSprite2D" parent="o_MainCharater/o_Amina" unique_id=1142004260]
+[node name="Sprite" type="AnimatedSprite2D" parent="o_MainCharater/o_2" unique_id=1142004260]
 y_sort_enabled = true
 scale = Vector2(0.7, 0.7)
 sprite_frames = ExtResource("7_0bxwm")
 animation = &"IdleRight"
 offset = Vector2(-0.5, -20)
 
-[node name="Coll" type="CollisionShape2D" parent="o_MainCharater/o_Amina" unique_id=1676876239]
+[node name="Coll" type="CollisionShape2D" parent="o_MainCharater/o_2" unique_id=1676876239]
 position = Vector2(0, -5.5)
 shape = SubResource("RectangleShape2D_qryqu")
 disabled = true
