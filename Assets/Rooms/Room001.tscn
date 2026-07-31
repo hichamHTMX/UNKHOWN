@@ -35,32 +35,32 @@ tile_map_data = PackedByteArray("AAD2//j/AQAIAAAAAAD0//n/AQAAAAAAAAD0//v/AQAAAAA
 [node name="o_MainCharater" parent="." unique_id=740173270 instance=ExtResource("5_b4eul")]
 unique_name_in_owner = true
 
-[node name="o_Hichem" type="CharacterBody2D" parent="o_MainCharater" unique_id=981840366]
+[node name="o_Char1" type="CharacterBody2D" parent="o_MainCharater" unique_id=981840366]
 position = Vector2(10, -35)
 
-[node name="Sprite" type="AnimatedSprite2D" parent="o_MainCharater/o_Hichem" unique_id=349386994]
+[node name="Sprite" type="AnimatedSprite2D" parent="o_MainCharater/o_Char1" unique_id=349386994]
 y_sort_enabled = true
 scale = Vector2(0.7, 0.7)
 sprite_frames = ExtResource("6_2gm7u")
 animation = &"IdleDown"
 offset = Vector2(-0.5, -20)
 
-[node name="Coll" type="CollisionShape2D" parent="o_MainCharater/o_Hichem" unique_id=224530506]
+[node name="Coll" type="CollisionShape2D" parent="o_MainCharater/o_Char1" unique_id=224530506]
 position = Vector2(0, -5.5)
 shape = SubResource("RectangleShape2D_51ai6")
 disabled = true
 
-[node name="o_Amina" type="CharacterBody2D" parent="o_MainCharater" unique_id=907937097]
+[node name="o_Char2" type="CharacterBody2D" parent="o_MainCharater" unique_id=907937097]
 position = Vector2(-12, -35)
 
-[node name="Sprite" type="AnimatedSprite2D" parent="o_MainCharater/o_Amina" unique_id=1142004260]
+[node name="Sprite" type="AnimatedSprite2D" parent="o_MainCharater/o_Char2" unique_id=1142004260]
 y_sort_enabled = true
 scale = Vector2(0.7, 0.7)
 sprite_frames = ExtResource("7_oxgax")
 animation = &"IdleDown"
 offset = Vector2(-0.5, -20)
 
-[node name="Coll" type="CollisionShape2D" parent="o_MainCharater/o_Amina" unique_id=1676876239]
+[node name="Coll" type="CollisionShape2D" parent="o_MainCharater/o_Char2" unique_id=1676876239]
 position = Vector2(0, -5.5)
 shape = SubResource("RectangleShape2D_qryqu")
 disabled = true
