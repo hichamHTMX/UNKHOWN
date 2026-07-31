@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://vasg80wn8fxq"]
+
+[ext_resource type="Texture2D" uid="uid://bbkwy1m3pc4q7" path="res://Assets/Sprites/Backgrounds/Tilesets/TilesetNature.png" id="1_8bpe6"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qryqu"]
+texture = ExtResource("1_8bpe6")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/y_sort_origin = 12
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 5.333334, 16, 5.333334, 16, 10.666668, -16, 10.666668)
+1:0/0 = 0
+1:0/0/y_sort_origin = 12
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 5.333334, 16, 5.333334, 16, 10.666668, -16, 10.666668)
+2:0/0 = 0
+2:0/0/y_sort_origin = 12
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 5.333334, 16, 5.333334, 16, 10.666668, -16, 10.666668)
+3:0/0 = 0
+3:0/0/y_sort_origin = 12
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 5.333334, 16, 5.333334, 16, 10.666668, -16, 10.666668)
+4:0/0 = 0
+4:0/0/y_sort_origin = 12
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 5.333334, 16, 5.333334, 16, 10.666668, -16, 10.666668)
+5:0/0 = 0
+5:0/0/y_sort_origin = 12
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 5.333334, 16, 5.333334, 16, 10.666668, -16, 10.666668)
+6:0/0 = 0
+6:0/0/y_sort_origin = 12
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 5.333334, 16, 5.333334, 16, 10.666668, -16, 10.666668)
+9:0/0 = 0
+9:0/0/y_sort_origin = 12
+9:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 5.333334, 16, 5.333334, 16, 10.666668, -16, 10.666668)
+8:0/0 = 0
+8:0/0/y_sort_origin = 12
+8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 5.333334, 16, 5.333334, 16, 10.666668, -16, 10.666668)
+7:0/0 = 0
+7:0/0/y_sort_origin = 12
+7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 5.333334, 16, 5.333334, 16, 10.666668, -16, 10.666668)
+
+[sub_resource type="TileSet" id="TileSet_r7fcg"]
+tile_size = Vector2i(8, 8)
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_qryqu")
+
+[node name="Trees" type="TileMapLayer" unique_id=193941224]
+y_sort_enabled = true
+use_parent_material = true
+tile_set = SubResource("TileSet_r7fcg")

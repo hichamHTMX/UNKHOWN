@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://b24tmh41pshh5"]
+
+[ext_resource type="Script" uid="uid://0hhwre15w2bh" path="res://Assets/Scripts/Intro.gd" id="1_1c6ho"]
+[ext_resource type="Shader" uid="uid://c6a41dvfcnhye" path="res://Assets/Shaders/Intro.gdshader" id="2_xxp6d"]
+[ext_resource type="Texture2D" uid="uid://cc7y2a5u1rpjm" path="res://icon.svg" id="3_rjr8i"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0qyg4"]
+shader = ExtResource("2_xxp6d")
+shader_parameter/glitch_interval = 1.0
+shader_parameter/glitch_duration = 0.3
+shader_parameter/glitch_speed = 7.0
+shader_parameter/slice_density = 14.0
+shader_parameter/slice_strength = 0.38
+shader_parameter/shake_strength = 0.02
+shader_parameter/chroma_offset = 0.016
+shader_parameter/noise_strength = 0.2
+shader_parameter/color_flash_strength = 0.4
+shader_parameter/scanline_strength = 0.18
+shader_parameter/local_warp_strength = 0.14
+shader_parameter/flip_chance = 0.15
+
+[node name="Intro" type="Node2D" unique_id=309424251]
+script = ExtResource("1_1c6ho")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=429863686]
+material = SubResource("ShaderMaterial_0qyg4")
+position = Vector2(323.24997, 98.5)
+scale = Vector2(0.98046863, 0.7890624)
+texture = ExtResource("3_rjr8i")

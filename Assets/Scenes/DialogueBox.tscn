@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://csoqr6u20i721"]
+
+[ext_resource type="Script" uid="uid://cqv5h4euxhq4a" path="res://Assets/Scripts/dialogue_box.gd" id="1_481jx"]
+
+[node name="DialogueBox" type="Node2D" unique_id=216355233]
+script = ExtResource("1_481jx")

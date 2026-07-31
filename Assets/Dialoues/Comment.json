@@ -1,0 +1,21 @@
+[
+  {
+	"_ignore": true,
+	"text": "النص هنا",
+	"speaker": "اسم المتحدث",
+	"language": "ar",
+	"typing_speed": 0.05,
+	"typing_sound": "res://Assets/Sounds/type.wav",
+	"box_visible": true,
+	"position": { "x": 30, "y": 200 },
+	"text_align": "center",
+	"vertical_align": "center",
+	"image": "res://Assets/Portraits/character.png",
+	"image_position": "left",
+	"image_frame_duration": 0.2,
+	"choices": ["خيار 1", "خيار 2"],
+	"choices_layout": "vertical",
+	"auto_advance": false,
+	"event": { "name": "اسم_الحدث", "data": { "key": "value" } }
+  },
+]

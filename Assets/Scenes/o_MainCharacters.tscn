@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://d5mdrcx2tahf"]
+
+[ext_resource type="Script" uid="uid://da1cu8fr50cql" path="res://Assets/Scripts/Movement.gd" id="1_tgk57"]
+
+[node name="o_MainCharater" type="Node2D" unique_id=740173270]
+y_sort_enabled = true
+script = ExtResource("1_tgk57")
