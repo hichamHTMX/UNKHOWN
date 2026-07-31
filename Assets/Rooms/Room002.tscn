@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://vasg80wn8fxq" path="res://Assets/Scenes/Trees.tscn" id="4_0j4eh"]
 [ext_resource type="PackedScene" uid="uid://d5mdrcx2tahf" path="res://Assets/Scenes/o_MainCharacters.tscn" id="5_saxiw"]
 [ext_resource type="SpriteFrames" uid="uid://j75idrm04cbh" path="res://Assets/Sprites/Characters/Hichem/HichemFrames.tres" id="6_brwub"]
-[ext_resource type="SpriteFrames" uid="uid://dqrcoaf6eqpj6" path="res://Assets/Sprites/Characters/Amina/AminaFrames.tres" id="7_0bxwm"]
+[ext_resource type="SpriteFrames" uid="uid://dqrcoaf6eqpj6" path="res://Assets/Sprites/Characters/Char/AminaFrames.tres" id="7_0bxwm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_51ai6"]
 size = Vector2(8, 11)
@@ -51,7 +51,7 @@ shape = SubResource("RectangleShape2D_51ai6")
 disabled = true
 
 [node name="o_Char2" type="CharacterBody2D" parent="o_MainCharater" unique_id=907937097]
-position = Vector2(-105, 36)
+position = Vector2(-87, 36)
 
 [node name="Sprite" type="AnimatedSprite2D" parent="o_MainCharater/o_Char2" unique_id=1142004260]
 y_sort_enabled = true

@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://b24tmh41pshh5"]
 
 [ext_resource type="Script" uid="uid://0hhwre15w2bh" path="res://Assets/Scripts/Intro.gd" id="1_1c6ho"]
-[ext_resource type="Shader" uid="uid://c6a41dvfcnhye" path="res://Assets/Shaders/Intro.gdshader" id="2_xxp6d"]
+[ext_resource type="Shader" uid="uid://c6a41dvfcnhye" path="res://Assets/Shaders/Glitch.gdshader" id="2_xxp6d"]
 [ext_resource type="Texture2D" uid="uid://cc7y2a5u1rpjm" path="res://icon.svg" id="3_rjr8i"]
+[ext_resource type="Shader" uid="uid://chjwoa88to74p" path="res://Assets/Shaders/Stars.gdshader" id="4_0qyg4"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0qyg4"]
 shader = ExtResource("2_xxp6d")
@@ -19,6 +20,23 @@ shader_parameter/scanline_strength = 0.18
 shader_parameter/local_warp_strength = 0.14
 shader_parameter/flip_chance = 0.15
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uy580"]
+shader = ExtResource("4_0qyg4")
+shader_parameter/horizontalMovement = 0.1
+shader_parameter/verticalMovement = 0.1
+shader_parameter/frequencyStar = 0.1
+shader_parameter/sizeStar = 100.0
+shader_parameter/brightnessStar = 3.0
+shader_parameter/shineFrequencyStar = 8.0
+shader_parameter/transparencyStar = 0.0
+shader_parameter/starIterations = 3
+shader_parameter/frequencyBgStar = 0.996
+shader_parameter/shineFrequencyBgStar = 1.0
+shader_parameter/transparencyBgStar = 0.0
+shader_parameter/colorBackground = Color(0.05, 0.04, 0.2, 1)
+shader_parameter/transparencyBackground = 0.0
+shader_parameter/seed = 0.0
+
 [node name="Intro" type="Node2D" unique_id=309424251]
 script = ExtResource("1_1c6ho")
 
@@ -27,3 +45,8 @@ material = SubResource("ShaderMaterial_0qyg4")
 position = Vector2(323.24997, 98.5)
 scale = Vector2(0.98046863, 0.7890624)
 texture = ExtResource("3_rjr8i")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=398650787]
+material = SubResource("ShaderMaterial_uy580")
+offset_right = 640.0
+offset_bottom = 480.0
