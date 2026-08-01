@@ -1,7 +1,7 @@
 extends TileMapLayer
 
 
-var area_scene: PackedScene = preload("res://Assets/Scenes/AreaWarpNext.tscn")
+var area_scene: PackedScene = preload("res://Assets/Scenes/AreaWarpLast.tscn")
 
 func _ready():
 	hide()

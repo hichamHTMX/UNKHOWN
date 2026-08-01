@@ -18,20 +18,56 @@ var last_directions := {}
 func _ready():
 	load_characters()
 	update_party()
-	set_start_direction()
+	apply_spawn_point()
 	await BlackScreen.fade_in(1)
-	DialogueManager.start_from_json("res://Assets/Dialoues/ar.json", %DialogueCanvas, 0, 1)
-	#await get_tree().create_timer(1).timeout
-	#DialogueManager.start_from_json("res://Assets/Dialoues/ar.json", %DialogueCanvas, 0, 2)
-	#await DialogueManager.dialogue_finished
-	#DialogueManager.start_from_json("res://Assets/Dialoues/ar.json", %DialogueCanvas, 0, 2)
+	
 
-func set_start_direction():
-	last_directions[leader] = start_direction
-	update_animation(leader, start_direction)
+func apply_spawn_point():
+	if global.next_spawn_point == "":
+		set_start_direction(start_direction)
+		return
+	var scene_root = get_tree().current_scene
+	var spawn_container = scene_root.get_node_or_null("SpawnPoints")
+	if spawn_container == null:
+		set_start_direction(start_direction)
+		return
+	var target_node = spawn_container.get_node_or_null(global.next_spawn_point)
+	if target_node == null:
+		set_start_direction(start_direction)
+		return
+	var target_pos: Vector2 = target_node.global_position
+
+	var offset_dir: Vector2 = Vector2.ZERO
+	if target_node.has_meta("offset_direction"):
+		offset_dir = target_node.get_meta("offset_direction")
+
+	var face_dir: Vector2 = start_direction
+	if target_node.has_meta("face_direction"):
+		face_dir = target_node.get_meta("face_direction")
+
+	trail.clear()
+	last_trail_pos = target_pos
+
+	var ordered = get_ordered_characters()
+	var offset_step := 16.0
+
+	for i in range(ordered.size()):
+		var character = ordered[i]
+		var back_offset = offset_dir * i * offset_step
+		character.global_position = target_pos + back_offset
+		trail.append(target_pos + back_offset)
+
+	set_start_direction(face_dir)
+	global.next_spawn_point = ""
+
+func set_start_direction(direction: Vector2):
+	last_directions[leader] = direction
+	last_dominant_axis[leader] = "x" if abs(direction.x) > abs(direction.y) else "y"
+	update_animation(leader, Vector2.ZERO)
 	for character in characters:
-		last_directions[character] = start_direction
-		update_animation(character, start_direction)
+		last_directions[character] = direction
+		last_dominant_axis[character] = "x" if abs(direction.x) > abs(direction.y) else "y"
+		update_animation(character, Vector2.ZERO)
 	
 func load_characters():
 	characters.clear()

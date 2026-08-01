@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var font_size: int = 20
-@export var name_font_size: int = 24
+@export var name_font_size: int = 20
 @export var text_color: Color = Color.WHITE
 @export var border_width: int = 4
 @export var padding: int = 25

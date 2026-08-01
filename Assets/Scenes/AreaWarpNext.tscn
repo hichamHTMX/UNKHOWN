@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c56mnpafjnn32"]
+
+[ext_resource type="Script" uid="uid://dkieupph0o5jl" path="res://Assets/Scripts/AreaWarpNext.gd" id="1_pv2b5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m7nag"]
+size = Vector2(16, 16)
+
+[node name="AreaWarpNext" type="Area2D" unique_id=1126566112]
+script = ExtResource("1_pv2b5")
+
+[node name="Coll" type="CollisionShape2D" parent="." unique_id=526846585]
+shape = SubResource("RectangleShape2D_m7nag")
+debug_color = Color(0, 0.6, 0, 0.41960785)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
