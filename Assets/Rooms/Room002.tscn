@@ -33,8 +33,8 @@ tile_map_data = PackedByteArray("AAD0/wcAAQAAAAAAAAD3/wcAAQAAAAAAAAD6/wcAAQAAAAA
 [node name="WarpNext" parent="." unique_id=1848998896 instance=ExtResource("3_swauf")]
 tile_map_data = PackedByteArray("AAADAPr/BAAAAAMAAAAEAPr/BAACAAMAAAA=")
 
-[node name="WarpLast" parent="." unique_id=1641066717 instance=ExtResource("5_yjiom")]
-tile_map_data = PackedByteArray("AAD4/wEABAADAAAAAAD4/wIABAADAAIAAAA=")
+[node name="WarpLast" parent="." unique_id=1582915221 instance=ExtResource("5_yjiom")]
+tile_map_data = PackedByteArray("AAD4/wIABAADAAIAAAD4/wEABAADAAAAAAA=")
 
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=1167562643]
 

@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://hdcf64bka7ax"]
 
-[ext_resource type="Script" uid="uid://dp4i1yh622mog" path="res://Assets/Scripts/AreaWarpLast.gd" id="1_g8atc"]
+[ext_resource type="Script" uid="uid://dth46tebp2gqs" path="res://Assets/Scripts/TextArea.gd" id="1_g8atc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m7nag"]
 size = Vector2(16, 16)
 
-[node name="AreaWarpLast" type="Area2D" unique_id=1126566112]
+[node name="TextArea" type="Area2D" unique_id=1126566112]
 script = ExtResource("1_g8atc")
 
 [node name="Coll" type="CollisionShape2D" parent="." unique_id=526846585]

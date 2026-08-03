@@ -6,9 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://vasg80wn8fxq" path="res://Assets/Scenes/Trees.tscn" id="4_4nonm"]
 [ext_resource type="Texture2D" uid="uid://cl0gf1j7gd3m3" path="res://Assets/Sprites/WarpBlock.png" id="4_o1sg5"]
 [ext_resource type="PackedScene" uid="uid://d5mdrcx2tahf" path="res://Assets/Scenes/o_MainCharacters.tscn" id="5_1h4aw"]
-[ext_resource type="Script" uid="uid://c28t070d60q8s" path="res://Assets/Scripts/TextBlock.gd" id="5_iay22"]
+[ext_resource type="Script" uid="uid://b8cafmdxos6yk" path="res://Assets/Scenes/Room000.gd" id="5_iay22"]
 [ext_resource type="SpriteFrames" uid="uid://j75idrm04cbh" path="res://Assets/Sprites/Characters/Hichem/HichemFrames.tres" id="6_saixg"]
-[ext_resource type="Texture2D" uid="uid://ckpb0cy120r46" path="res://Assets/Sprites/32x32 textures (60).png" id="7_o1sg5"]
+[ext_resource type="Script" uid="uid://cysuk6ty2xhil" path="res://Assets/Scripts/Light.gd" id="8_iay22"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iay22"]
 texture = ExtResource("2_ug4gy")
@@ -305,6 +305,15 @@ custom_data_layer_0/name = "is_trigger"
 custom_data_layer_0/type = 1
 sources/0 = SubResource("TileSetAtlasSource_3fi6n")
 
+[sub_resource type="Gradient" id="Gradient_o1sg5"]
+offsets = PackedFloat32Array(0, 0.14539006)
+colors = PackedColorArray(1, 1, 1, 1, 0.028368793, 0.028368793, 0.028368793, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_iay22"]
+gradient = SubResource("Gradient_o1sg5")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_51ai6"]
 size = Vector2(8, 11)
 
@@ -315,7 +324,7 @@ y_sort_enabled = true
 unique_name_in_owner = true
 
 [node name="Coll" parent="." unique_id=515112828 instance=ExtResource("2_qxaqy")]
-tile_map_data = PackedByteArray("AAD6//3/BAADAAEAAAD6//7/BAADAAEAAAD6////BAADAAEAAAD6/wAABAADAAEAAAD6/wEABAADAAEAAAD6//z/BAADAAEAAAD7//v/BAABAAMAAAD8//v/BAABAAMAAAD9//v/BAABAAMAAAD+//v/BAABAAMAAAD///v/BAABAAMAAAAAAPv/BAABAAMAAAABAPv/BAABAAMAAAACAPv/BAABAAMAAAADAPv/BAABAAMAAAAEAPv/BAABAAMAAAAFAPz/BAADAAEAAAAFAP3/BAADAAEAAAAFAP7/BAADAAEAAAAFAP//BAADAAEAAAAFAAAABAADAAEAAAAFAAEABAADAAEAAAD7/wIABAABAAMAAAD8/wIABAABAAMAAAD9/wIABAABAAMAAAD+/wIABAAHAAAAAAAEAAIABAABAAMAAAADAAIABAABAAMAAAACAAIABAABAAMAAAABAAIABAAEAAAAAAD+/wMABAADAAEAAAD+/wQABAADAAIAAAABAAMABAADAAEAAAABAAQABAADAAIAAAD6//v/BAAEAAAAAAAFAPv/BAAHAAAAAAD6/wIABAAEAAMAAAAFAAIABAAHAAMAAAA=")
+tile_map_data = PackedByteArray("AAD6//3/BAADAAEAAAD6//7/BAADAAEAAAD6////BAADAAEAAAD6/wAABAADAAEAAAD6/wEABAADAAEAAAD6//z/BAADAAEAAAD7//v/BAABAAMAAAD8//v/BAABAAMAAAD9//v/BAABAAMAAAD+//v/BAABAAMAAAD///v/BAABAAMAAAAAAPv/BAABAAMAAAABAPv/BAABAAMAAAACAPv/BAABAAMAAAADAPv/BAABAAMAAAAEAPv/BAABAAMAAAAFAPz/BAADAAEAAAAFAP3/BAADAAEAAAAFAP7/BAADAAEAAAAFAP//BAADAAEAAAAFAAAABAADAAEAAAAFAAEABAADAAEAAAD7/wIABAABAAMAAAD8/wIABAABAAMAAAD9/wIABAABAAMAAAD+/wIABAAHAAAAAAAEAAIABAABAAMAAAADAAIABAABAAMAAAACAAIABAABAAMAAAABAAIABAAEAAAAAAD+/wMABAADAAEAAAD+/wQABAADAAEAAAABAAMABAADAAEAAAABAAQABAADAAEAAAD6//v/BAAEAAAAAAAFAPv/BAAHAAAAAAD6/wIABAAEAAMAAAAFAAIABAAHAAMAAAD+/wUABAADAAEAAAD+/wYABAAEAAMAAAD//wYABAABAAMAAAAAAAYABAABAAMAAAABAAYABAAHAAMAAAABAAUABAADAAEAAAA=")
 
 [node name="Ground" type="TileMapLayer" parent="." unique_id=101270968]
 z_index = -999
@@ -323,6 +332,7 @@ tile_map_data = PackedByteArray("AAD7//z/AQAAAAAAAAD7//3/AQAAAAAAAAD7//7/AQAAAAA
 tile_set = SubResource("TileSet_3fi6n")
 
 [node name="WarpNext" parent="." unique_id=1848998896 instance=ExtResource("3_v8hm3")]
+tile_map_data = PackedByteArray("AAD//wUABAAAAAMAAAAAAAUABAACAAMAAAA=")
 
 [node name="TextBlock" type="TileMapLayer" parent="." unique_id=1680976172]
 modulate = Color(1, 1, 0, 1)
@@ -331,8 +341,8 @@ tile_set = SubResource("TileSet_kmq72")
 script = ExtResource("5_iay22")
 
 [node name="Text" type="Node2D" parent="TextBlock" unique_id=1552528011]
-metadata/start_index = 0
-metadata/end_index = 0
+metadata/start_index = 26
+metadata/end_index = 30
 
 [node name="Trees" parent="." unique_id=193941224 instance=ExtResource("4_4nonm")]
 
@@ -353,12 +363,14 @@ unique_name_in_owner = true
 [node name="o_Clover" type="CharacterBody2D" parent="o_MainCharater" unique_id=981840366 groups=["Player"]]
 position = Vector2(0, 10)
 
-[node name="Light" type="PointLight2D" parent="o_MainCharater/o_Clover" unique_id=783604935]
+[node name="Light" type="PointLight2D" parent="o_MainCharater/o_Clover" unique_id=847703966]
 visible = false
-position = Vector2(-5.543232e-06, -10.000004)
-scale = Vector2(6.6875, 4.9999995)
+position = Vector2(0, -11)
 blend_mode = 2
-texture = ExtResource("7_o1sg5")
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_iay22")
+texture_scale = 9.5
+script = ExtResource("8_iay22")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="o_MainCharater/o_Clover" unique_id=349386994]
 y_sort_enabled = true

@@ -25,6 +25,30 @@
 	{"text": "ساستطيع سماعك تناديني سيدي في الظلام", "box_visible": false, "position": { "x": 30, "y": 200 }, "text_align": "center",},
 	{"text": "لن اعطيك تفاصيل اكثر من هذا.",},
 	{"text": "هل انت مستعد لبداية رحلتك؟", "choices": ["نعم", "نعم"], "choices_layout": "vertical",},
+	{"text": "يبدو أنه مغلق.", "typing_speed": 0.05, "box_visible": true, "language" : "ar", "position": { "x": 30, "y": 0 }, "text_align": "",},
+	{"text": "مكتوب هنا أنه لايفتح بالطرق العادية.",},
+	{"text": "يبدو ان القفل مصنوع من الظلام.",},
+	{"text": "ايعقل ان يكون هذا اختبارا؟",},
+	{"text": "اممم اعتقد انه علي مناداة سيدي.",},
+	{"text": "سيدي ! سيدي ! احتاجك.", "typing_speed": 0.05, "box_visible": true, "language" : "ar", "position": { "x": 30, "y": 0 }, "text_align": "",},
+	{"text": "اوه!", "typing_speed": 0.05, "box_visible": false, "language" : "ar", "position": { "x": 30, "y": 200 }, "text_align": "center",},
+	{"text": "اوبس.",},
+	{"text": "اعتقد اني قمت بشيئ خاطئ هنا.",},
+	{"text": "الان يمكنك العبور.",},
+	{"text": "هاي انتظر.", "typing_speed": 0.05, "box_visible": true, "language" : "ar", "position": { "x": 30, "y": 0 }, "text_align": "",},
+	{"text": "مالغرض من هذا الباب.",},
+	{"text": "بكل بساطة.\n لم يكن من المفترض ان يكون هذا الباب هنا.", "typing_speed": 0.05, "box_visible": false, "language" : "ar", "position": { "x": 30, "y": 200 }, "text_align": "center",},
+	{"text": "لانه لو كان سببا تافها ك حل لغز ماكنت لأتدخل.",},
+	{"text": "اصبح الامر مخيف", "typing_speed": 0.05, "box_visible": true, "language" : "ar", "position": { "x": 30, "y": 0 }, "text_align": "",},
+	{"text": "لم اعد اعرف ان كنت اتعامل مع صديق ام عدو.",},
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

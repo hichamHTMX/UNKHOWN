@@ -1,7 +1,4 @@
-extends TileMapLayer
-
-
-var area_scene: PackedScene = preload("res://Assets/Scenes/TextArea.tscn")
+extends "res://Assets/Scripts/TextBlock.gd"
 
 func _ready():
 	hide()
@@ -23,4 +20,17 @@ func _ready():
 			area.dialogue_end_index = end_index
 			add_child(area)
 	await DialogueManager.dialogue_finished
+	await BlackScreen.fade_out()
+	var canvas = get_tree().current_scene.get_node_or_null("DialogueCanvas")
+	DialogueManager.start_from_json("res://Assets/Dialoues/ar.json", canvas, 31, 39)
+	global.Can_move = false
+	await DialogueManager.dialogue_finished
+	await BlackScreen.fade_in()
+	await get_tree().create_timer(1.0).timeout
+	DialogueManager.start_from_json("res://Assets/Dialoues/ar.json", canvas, 40, 41)
+	global.Can_move = false
+	await DialogueManager.dialogue_finished
+	global.Can_move = true
+	global.Camera_follow = true
 	queue_free()
+	

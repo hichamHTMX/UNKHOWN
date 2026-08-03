@@ -111,7 +111,15 @@ func get_ordered_characters() -> Array:
 		ordered.append(characters[idx])
 	return ordered
 
+@onready var o_cam: Camera2D = $o_Cam
+@export var follow_speed := 4.0
+
 func _physics_process(delta):
+	#if global.Camera_follow and leader:
+		#o_cam.global_position = o_cam.global_position.lerp(
+			#leader.global_position,
+			#follow_speed * delta
+		#)
 	if leader and global.Can_move:
 		if leader:
 			_mover(delta)
